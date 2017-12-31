@@ -15,6 +15,7 @@
 		7E09E08F1FEFDB74006FC573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E09E08D1FEFDB74006FC573 /* LaunchScreen.storyboard */; };
 		7E09E09A1FEFDB74006FC573 /* Post_GoalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09E0991FEFDB74006FC573 /* Post_GoalTests.swift */; };
 		7E09E0A51FEFDB74006FC573 /* Post_GoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09E0A41FEFDB74006FC573 /* Post_GoalUITests.swift */; };
+		7E389D701FF929300086C24D /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E389D6F1FF929300086C24D /* GoalType.swift */; };
 		7EDE5C771FF2E8D4001D184A /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE5C761FF2E8D4001D184A /* GoalCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		7E09E0A01FEFDB74006FC573 /* Post-GoalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Post-GoalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E09E0A41FEFDB74006FC573 /* Post_GoalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_GoalUITests.swift; sourceTree = "<group>"; };
 		7E09E0A61FEFDB74006FC573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E389D6F1FF929300086C24D /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
 		7EDE5C761FF2E8D4001D184A /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 		7E09E0B41FEFDBA6006FC573 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				7E389D6F1FF929300086C24D /* GoalType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EDE5C771FF2E8D4001D184A /* GoalCell.swift in Sources */,
+				7E389D701FF929300086C24D /* GoalType.swift in Sources */,
 				7E09E0841FEFDB74006FC573 /* GoalsViewController.swift in Sources */,
 				7E09E08A1FEFDB74006FC573 /* Post_Goal.xcdatamodeld in Sources */,
 				7E09E0821FEFDB74006FC573 /* AppDelegate.swift in Sources */,
@@ -467,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2QJ9WPDK5;
 				INFOPLIST_FILE = "Post-Goal/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahmed-Elbasha.Post-Goal";
@@ -481,6 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P2QJ9WPDK5;
 				INFOPLIST_FILE = "Post-Goal/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahmed-Elbasha.Post-Goal";
