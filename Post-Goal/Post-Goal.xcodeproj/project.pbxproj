@@ -16,6 +16,7 @@
 		7E09E09A1FEFDB74006FC573 /* Post_GoalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09E0991FEFDB74006FC573 /* Post_GoalTests.swift */; };
 		7E09E0A51FEFDB74006FC573 /* Post_GoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E09E0A41FEFDB74006FC573 /* Post_GoalUITests.swift */; };
 		7E389D701FF929300086C24D /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E389D6F1FF929300086C24D /* GoalType.swift */; };
+		7E53C2251FFD34AB004B4051 /* CreateGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E53C2241FFD34AB004B4051 /* CreateGoalViewController.swift */; };
 		7EDE5C771FF2E8D4001D184A /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE5C761FF2E8D4001D184A /* GoalCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		7E09E0A41FEFDB74006FC573 /* Post_GoalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_GoalUITests.swift; sourceTree = "<group>"; };
 		7E09E0A61FEFDB74006FC573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E389D6F1FF929300086C24D /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		7E53C2241FFD34AB004B4051 /* CreateGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalViewController.swift; sourceTree = "<group>"; };
 		7EDE5C761FF2E8D4001D184A /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				7E09E0831FEFDB74006FC573 /* GoalsViewController.swift */,
+				7E53C2241FFD34AB004B4051 /* CreateGoalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EDE5C771FF2E8D4001D184A /* GoalCell.swift in Sources */,
+				7E53C2251FFD34AB004B4051 /* CreateGoalViewController.swift in Sources */,
 				7E389D701FF929300086C24D /* GoalType.swift in Sources */,
 				7E09E0841FEFDB74006FC573 /* GoalsViewController.swift in Sources */,
 				7E09E08A1FEFDB74006FC573 /* Post_Goal.xcdatamodeld in Sources */,
