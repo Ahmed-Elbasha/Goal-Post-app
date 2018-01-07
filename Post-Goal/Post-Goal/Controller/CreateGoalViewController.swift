@@ -34,6 +34,6 @@ class CreateGoalViewController: UIViewController {
     }
     
     @IBAction func returnButtonWasPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
 }
