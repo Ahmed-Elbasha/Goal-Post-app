@@ -26,6 +26,7 @@ class GoalCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    // configures what every cell should contains based on data fetched from Goal core data entity.
     func configureCell(description: String, type: GoalType, goalProgressAmount: Int) {
         self.goalDescriptionLabel.text = description
         self.goalTypeLabel.text = type.rawValue

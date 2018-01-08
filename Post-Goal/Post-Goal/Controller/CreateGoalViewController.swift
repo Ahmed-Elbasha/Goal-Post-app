@@ -34,6 +34,7 @@ class CreateGoalViewController: UIViewController {
     }
     
     @IBAction func returnButtonWasPressed(_ sender: Any) {
+        // dismisses the CreateGoalVC using our custom CAAnimation.
         dismissDetail()
     }
 }

@@ -9,6 +9,8 @@
 import UIKit
 
 extension UIViewController {
+    
+    // custom CAAnimation appears when UIViewController presented
     func presentDetail(_ viewControllerToPresent: UIViewController) {
         let transition =  CATransition()
         transition.duration = 0.3
@@ -19,6 +21,7 @@ extension UIViewController {
         present(viewControllerToPresent, animated: false, completion: nil)
     }
     
+    // custom CAAnimation appears when UIViewController dismissed.
     func dismissDetail() {
         let transition = CATransition()
         transition.duration = 0.03
