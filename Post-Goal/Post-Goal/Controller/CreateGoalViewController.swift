@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateGoalViewController: UIViewController {
+class CreateGoalViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var goalTextView: UITextView!
     @IBOutlet weak var shortTermButton: UIButton!
@@ -22,6 +22,7 @@ class CreateGoalViewController: UIViewController {
         nextButton.bindToKeyboard()
         shortTermButton.setSelectedColor()
         longTermButton.setDeselectedColor()
+        goalTextView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +37,11 @@ class CreateGoalViewController: UIViewController {
     }
     
     @IBAction func nextButtonWasPressed(_ sender: Any) {
+        if goalTextView.text != "" && goalTextView.text != "What is your goal?" {
+            guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalVC") as? FinishGoalViewController else { return }
+            finishGoalVC.initData(description: goalTextView.text!, type: goalType)
+            presentDetail(finishGoalVC)
+        }
     }
     
     @IBAction func shortTermButtonWasPressed(_ sender: Any) {
@@ -48,4 +54,18 @@ class CreateGoalViewController: UIViewController {
         // dismisses the CreateGoalVC using our custom CAAnimation.
         dismissDetail()
     }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        goalTextView.text = ""
+        goalTextView.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        textView.resignFirstResponder()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textViewDidEndEditing(goalTextView)
+    }
+    
 }
