@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FinishGoalViewController: UIViewController, UITextFieldDelegate {
     
@@ -33,10 +34,16 @@ class FinishGoalViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func createGoalButtonWasPressed(_ sender: Any) {
-        // Pass data into Core Data goal model.
+        if pointsTextField.text != "" {
+        saveGoal { (complete) in
+            if complete {
+                dismiss(animated: true, completion: nil)
+            }
+        }
+        }
     }
     
-    @IBAction func returnButtonWasPressed(_ sender: Any) {
+    @IBAction func backButtonWasPressed(_ sender: Any) {
         dismissDetail()
     }
     
@@ -51,4 +58,38 @@ class FinishGoalViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         textFieldDidEndEditing(pointsTextField)
     }
+    
+    func saveGoal(completion: (_ finished: Bool) -> ()) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        let goal = Goal(context: managedContext)
+        
+        goal.goalDescription = goalDescription
+        goal.goalType = goalType.rawValue
+        goal.goalCompletionValue = Int32(pointsTextField.text!)!
+        goal.goalProgress = Int32(0)
+        
+        do {
+            try managedContext.save()
+            print("Successfully saved data.")
+            completion(true)
+        } catch {
+            debugPrint("could not save ... \(error.localizedDescription)")
+            completion(false)
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

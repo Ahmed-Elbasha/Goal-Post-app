@@ -359,7 +359,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <action selector="returnButtonWasPressed:" destination="b1V-Fh-vF2" eventType="touchUpInside" id="1wV-dd-m8p"/>
+                                            <action selector="backButtonWasPressed:" destination="b1V-Fh-vF2" eventType="touchUpInside" id="LzN-Qm-Ymk"/>
                                         </connections>
                                     </button>
                                 </subviews>
