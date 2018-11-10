@@ -103,7 +103,6 @@ extension GoalsViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension GoalsViewController {
-    
     func removeGoal(atIndexPath indexPath: IndexPath) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else {return}
         managedContext.delete(goals[indexPath.row])
